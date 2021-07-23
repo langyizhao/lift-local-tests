@@ -4,3 +4,7 @@
 
 * `markdown comment` -> generates a comment with a markdown header
 * `markdown code snippet` -> generates a comment with a code snippet
+
+# License
+
+This code is dual-licensed under the terms of the MIT and Apache 2.0 Licenses
