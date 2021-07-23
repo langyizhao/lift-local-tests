@@ -17,7 +17,7 @@ def emit_applicable():
     print("true")
 
 def run(path):
-    pathlist = Path(path).glob('**/*.txt')
+    pathlist = Path(path).glob('**/*.md')
 
     tool_notes = []
     for filename in pathlist:
