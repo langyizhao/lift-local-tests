@@ -18,27 +18,29 @@ def emit_applicable():
 
 def run(path):
 
-    bom = {
-        "bomFormat": "CycloneDX",
-        "specVersion": "1.4",
-        "version": 1,
-        "metadata": {},
-        "components": [
-            {
-                "name": "Vulnerable Component",
-                "version": "3",
-                "bom-ref": "vulnerable-component",
-            }
-        ],
-        "dependencies": [],
-        "vulnerabilities": [
-            {
-                "bom-ref": "vulnerable-component"
-            }
-        ],
+    data = {
+        "cyclone-dx-sbom": {
+            "bomFormat": "CycloneDX",
+            "specVersion": "1.4",
+            "version": 1,
+            "metadata": {},
+            "components": [
+                {
+                    "name": "Vulnerable Component",
+                    "version": "3",
+                    "bom-ref": "vulnerable-component",
+                }
+            ],
+            "dependencies": [],
+            "vulnerabilities": [
+                {
+                    "bom-ref": "vulnerable-component"
+                }
+            ],
+        }
     }
 
-    print(json.dumps(bom))
+    print(json.dumps(data))
 
 def main():
     parser = argparse.ArgumentParser(description='Bom Tool')
